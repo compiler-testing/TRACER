@@ -1,0 +1,51 @@
+{
+   "DialectNum" : "8",
+   "LowerPass" : [
+      "-convert-arith-to-llvm",
+      "-convert-math-to-llvm",
+      "-convert-math-to-spirv",
+      "-convert-memref-to-llvm",
+      "-convert-memref-to-spirv",
+      "-convert-vector-to-scf",
+      "-lower-affine",
+      "-pass-pipeline=\"builtin.module(func.func(convert-affine-for-to-gpu))\""
+   ],
+   "LowerPassNum" : "8",
+   "dialect" : [
+      "arith",
+      "bufferization",
+      "memref",
+      "vector",
+      "affine",
+      "math",
+      "tensor",
+      "func"
+   ],
+   "operation" : [
+      "arith.constant",
+      "bufferization.to_memref",
+      "memref.alloc",
+      "vector.transfer_write",
+      "affine.yield",
+      "affine.for",
+      "memref.copy",
+      "vector.transfer_read",
+      "arith.muli",
+      "arith.addi",
+      "arith.shli",
+      "math.rsqrt",
+      "affine.load",
+      "affine.store",
+      "bufferization.to_tensor",
+      "tensor.expand_shape",
+      "arith.minf",
+      "arith.cmpi",
+      "arith.select",
+      "arith.cmpf",
+      "arith.index_cast",
+      "arith.xori",
+      "func.return",
+      "func.func",
+      "builtin.module"
+   ]
+}
